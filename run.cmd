@@ -4,20 +4,20 @@ echo Executing at %0
 
 echo . . .
 
-echo A: Creating "programs/p%100/p%1%20/p%1%2%3/a.cpp" if needed
+echo A: Creating "programs/%100/%1%20/%1%2%3/program.cpp" if needed
 
 py utils/generateProgram.py %1 %2 %3
 
 echo . . .
 
-echo B: Compiling "programs/p%100/p%1%20/p%1%2%3/a.cpp"
+echo B: Compiling "programs/%100/%1%20/%1%2%3/program.cpp"
 
-g++ -std=c++0x -o programs/p%100/p%1%20/p%1%2%3/a programs/p%100/p%1%20/p%1%2%3/a.cpp
-
-echo . . .
-
-echo C: Starting "programs/p%100/p%1%20/p%1%2%3/a.exe"
+g++ -std=c++0x -o programs/%100/%1%20/%1%2%3/program programs/%100/%1%20/%1%2%3/program.cpp
 
 echo . . .
 
-start programs/p%100/p%1%20/p%1%2%3/a.exe
+echo C: Starting "programs/%100/%1%20/%1%2%3/program.exe"
+
+echo . . .
+
+start programs/%100/%1%20/%1%2%3/program.exe
