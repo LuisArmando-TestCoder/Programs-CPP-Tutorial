@@ -1,6 +1,6 @@
 # Programs CPP
 
-To run, lets say, p000/a.exe
+To run, let´s say, 000/program.exe
 
 
 ```cmd
@@ -11,6 +11,6 @@ or (Copy the following commands coming out of ./run x y z)
 
 
 ```cmd
-g++ -std=c++0x -o programs/p000/p000/p000/a programs/p000/p000/p000/a.cpp
-start programs/p000/p000/p000/a.exe
+g++ -std=c++0x -o programs/000/000/000/a programs/000/000/000/program.cpp
+start programs/000/000/000/program.exe
 ```
