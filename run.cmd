@@ -4,20 +4,22 @@ echo Executing at %0
 
 echo . . .
 
-echo A: Creating "programs/%100/%1%20/%1%2%3/program.cpp" if needed
+set index=%1
 
-py utils/generateProgram.py %1 %2 %3
+echo A: Creating "programs/%index:~0,1%00/%index:~0,1%%index:~1,1%0/%index:~0,1%%index:~1,1%%index:~2,1%/program.cpp" if needed
 
-echo . . .
-
-echo B: Compiling "programs/%100/%1%20/%1%2%3/program.cpp"
-
-g++ -std=c++0x -o programs/%100/%1%20/%1%2%3/program programs/%100/%1%20/%1%2%3/program.cpp
+py utils/generateProgram.py %index:~0,1% %index:~1,1% %index:~2,1%
 
 echo . . .
 
-echo C: Starting "programs/%100/%1%20/%1%2%3/program.exe"
+echo B: Compiling "programs/%index:~0,1%00/%index:~0,1%%index:~1,1%0/%index:~0,1%%index:~1,1%%index:~2,1%/program.cpp"
+
+g++ -std=c++0x -o programs/%index:~0,1%00/%index:~0,1%%index:~1,1%0/%index:~0,1%%index:~1,1%%index:~2,1%/program programs/%index:~0,1%00/%index:~0,1%%index:~1,1%0/%index:~0,1%%index:~1,1%%index:~2,1%/program.cpp
 
 echo . . .
 
-start programs/%100/%1%20/%1%2%3/program.exe
+echo C: Starting "programs/%index:~0,1%00/%index:~0,1%%index:~1,1%0/%index:~0,1%%index:~1,1%%index:~2,1%/program.exe"
+
+echo . . .
+
+start programs/%index:~0,1%00/%index:~0,1%%index:~1,1%0/%index:~0,1%%index:~1,1%%index:~2,1%/program.exe

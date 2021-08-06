@@ -4,10 +4,10 @@ To run, let\'s say, 000/program.exe
 
 
 ```cmd
-./run 0 0 0
+./run 000
 ```
 
-or (Copy the following commands coming out of ./run x y z)
+or (Copy the following commands coming out of ./run XYZ)
 
 
 ```cmd
