@@ -1,0 +1,1 @@
+PS C:\Experiments\tutorialCPP\ -std=c++0x -o programs/p000/p000/p001/a programs/p000/p000/p001/a.cpp
