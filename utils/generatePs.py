@@ -1,11 +1,11 @@
 import os
 
-step = 100
+step = 1
 population = 10
 
-for i0 in range(0, step * population, step):
-    for i1 in range(0, step, int(step / population)):
-        for i2 in range(int(step / population)):
+for i0 in range(0, population, step):
+    for i1 in range(0, population, step):
+        for i2 in range(population):
             folderPath = f"programs/p{i0}00/p{i0}{i1}0/p{i0}{i1}{i2}"
 
             if not os.path.exists(folderPath):
