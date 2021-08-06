@@ -1,3 +1,5 @@
 # Programs CPP
 
-g++ p0/p0/p0/a.cpp; start a
+```
+g++ -std=c++0x -o programs/p000/p000/p000/a programs/p000/p000/p000/a.cpp; start programs/p000/p000/p000/a.exe
+```
