@@ -1,6 +1,6 @@
 # Programs CPP
 
-To run, let´s say, 000/program.exe
+To run, let's say, 000/program.exe
 
 
 ```cmd
