@@ -7,7 +7,7 @@ To run, lets say, p000/a.exe
 ./run 0 0 0
 ```
 
-or
+or (Copy the following command coming out of./run x y z)
 
 
 ```cmd
