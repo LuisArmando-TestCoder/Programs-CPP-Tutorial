@@ -11,6 +11,6 @@ or (Copy the following commands coming out of ./run x y z)
 
 
 ```cmd
-g++ -std=c++0x -o programs/000/000/000/a programs/000/000/000/program.cpp
+g++ -std=c++0x -o programs/000/000/000/program programs/000/000/000/program.cpp
 start programs/000/000/000/program.exe
 ```
