@@ -10,6 +10,9 @@ float getNRoot(float base, float number) {
 int main() {
     float x = 2, y = 4;
 
+    cout << "x: " << x << endl;
+    cout << "y: " << y << endl;
+
     float potencia = pow(x, y);
     cout << "x^y: " << potencia << endl;
 
