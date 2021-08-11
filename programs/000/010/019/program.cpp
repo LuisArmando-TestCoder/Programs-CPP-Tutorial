@@ -7,7 +7,7 @@ int main() {
 	int sizeX = 3;
 	int matrix[sizeY][sizeX] = {
 		{1, 2, 3},
-		{2, 4, 5},
+		{2, 4, 4},
 		{3, 5, 7},
 	};
 
@@ -40,11 +40,11 @@ int main() {
 		}
 	}
 
-	stop:if (!havingPerfectMatrix) {
-		cout << "not ";
-	}
+	stop:
 
-	cout << "a perfect matrix";
+	string stringBoolean = !havingPerfectMatrix ? "not " : "";
+
+	cout << stringBoolean << "a perfect matrix";
 
 	cin.get();
 
