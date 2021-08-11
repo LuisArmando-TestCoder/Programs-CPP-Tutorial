@@ -36,6 +36,16 @@ char *strrev(char *str)
 
 using namespace std;
 
+string getUppercaseString(string text) {
+	string uppercaseString = "";
+
+	for (int i = 0; i < text.length(); i++) {
+		uppercaseString += toupper(text.c_str()[i]);
+	}
+
+	return uppercaseString;
+}
+
 int main() {
 	string wordA = "solos";
 	string wordB = string(wordA.rbegin(), wordA.rend());
@@ -51,6 +61,10 @@ int main() {
 	string havingPalindromeBooleanWord = wordB == wordA ? "" : "not ";
 
 	cout << "The word " << wordA << " is " << havingPalindromeBooleanWord << "a palindrome" << endl;
+	
+	// strupr(wordB); // A function which is not defined by every C compile
+	
+	cout << getUppercaseString(wordB) << "!";
 
 	cin.get();
 
