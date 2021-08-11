@@ -11,7 +11,7 @@ py utils/generateProgram.py %index:~0,1% %index:~1,1% %index:~2,1%
 
 echo Compiling C++ code at %baseFolders%/program.cpp
 
-g++ -std=c++0x -o %baseFolders%/program %baseFolders%/program.cpp
+g++ -std=c++2a -o %baseFolders%/program %baseFolders%/program.cpp
 
 echo Starting %baseFolders%/program.exe
 
