@@ -21,12 +21,12 @@ filePath = f"{folderPath}/program.cpp"
 def createFile():
     file = open(filePath, "w")
     file.write(
-        "#include <iostream>\n\n"
-        + "using namespace std;\n\n"
-        + "int main() {"
-        + "\n\tcin.get();\n"
-        + "\n\treturn 0;\n"
-        + "}"
+        "#include <iostream>\n" +
+        "#include <string>\n\n" +
+        "int main() {\n\t\n" +
+        "\n\tstd::cin.get();\n" +
+        "\n\treturn 0;\n" +
+        "}"
     )
 
 executeConditionalPath(filePath, createFile)

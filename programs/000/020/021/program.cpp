@@ -62,7 +62,7 @@ int main() {
 
 	cout << "The word " << wordA << " is " << havingPalindromeBooleanWord << "a palindrome" << endl;
 	
-	// strupr(wordB); // A function which is not defined by every C compile
+	// strupr(wordB); strlwr(wordB); // A function which is not defined by every C compile
 	
 	cout << getUppercaseString(wordB) << "!";
 
