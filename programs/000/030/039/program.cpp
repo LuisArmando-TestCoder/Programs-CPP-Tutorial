@@ -1,11 +1,12 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-	cin.get();
+	// signed -> with a sign
+	signed short int value = -2;
 
-	// signed
+	std::count << value;
+
+	std::cin.get();
 
 	return 0;
 }

@@ -25,7 +25,6 @@ def createFile():
         "#include <string>\n\n" +
         "int main() {\n\t\n" +
         "\n\tstd::cin.get();\n" +
-        "\n\treturn 0;\n" +
         "}"
     )
 
