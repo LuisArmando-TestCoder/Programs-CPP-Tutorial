@@ -1,31 +1,56 @@
 import os
 import sys
 
-arguments = list(sys.argv)
-a0 = arguments[1]
-a1 = arguments[2]
-a2 = arguments[3]
-folderPath = f"programs/{a0}00/{a0}{a1}0/{a0}{a1}{a2}"
-
 def executeConditionalPath(path, callback):
+    print("Hey", path, os.path.exists(path))
     if not os.path.exists(path):
         print(f"This resource didn't exist: ", path)
         print("Proceeding to create: ", path)
 
-        callback()
+        callback(path)
 
-executeConditionalPath(folderPath, lambda: os.makedirs(folderPath))
+def createFile(path, contents):
+    file = open(path, "w")
+    file.write(contents)
+    file.close()
 
-filePath = f"{folderPath}/program.cpp"
+arguments = list(sys.argv)
+a2 = arguments[1]
+a3 = arguments[2]
+a4 = arguments[3]
+folderPath = f"programs/{a2}00/{a2}{a3}0/{a2}{a3}{a4}"
 
-def createFile():
-    file = open(filePath, "w")
-    file.write(
+executeConditionalPath(
+    folderPath,
+    lambda path: os.makedirs(path)
+)
+
+executeConditionalPath(
+    f"{folderPath}/program.cpp",
+    lambda path: createFile(
+        path,
         "#include <iostream>\n" +
-        "#include <string>\n\n" +
+        "#include <string>\n" +
+        "#include \"head.h\"\n\n" +
         "int main() {\n\t\n" +
         "\n\tstd::cin.get();\n" +
         "}"
     )
+)
 
-executeConditionalPath(filePath, createFile)
+executeConditionalPath(
+    f"{folderPath}/head",
+    lambda path: os.makedirs(path)
+)
+
+executeConditionalPath(
+    f"{folderPath}/head/head.h",
+    lambda path: createFile(
+        path,
+        "#pragma once\n\n"
+        "#ifndef head_h" +
+        "\n\t#define head_h\n\n" +
+        "\t\n\n" +
+        "#endif"
+    )
+)
