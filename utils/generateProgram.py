@@ -2,7 +2,6 @@ import os
 import sys
 
 def executeConditionalPath(path, callback):
-    print("Hey", path, os.path.exists(path))
     if not os.path.exists(path):
         print(f"This resource didn't exist: ", path)
         print("Proceeding to create: ", path)
@@ -32,8 +31,10 @@ executeConditionalPath(
         "#include <iostream>\n" +
         "#include <string>\n" +
         "#include \"head.h\"\n\n" +
-        "int main() {\n\t\n" +
-        "\n\tstd::cin.get();\n" +
+        "int main()\n" +
+        "{\n" +
+        "\t\n\n" +
+        "\tstd::cin.get();\n" +
         "}"
     )
 )
@@ -47,10 +48,18 @@ executeConditionalPath(
     f"{folderPath}/head/head.h",
     lambda path: createFile(
         path,
-        "#pragma once\n\n"
-        "#ifndef head_h" +
-        "\n\t#define head_h\n\n" +
-        "\t\n\n" +
-        "#endif"
+        "#pragma once\n\n" +
+        "void f();"
+    )
+)
+
+executeConditionalPath(
+    f"{folderPath}/head.cpp",
+    lambda path: createFile(
+        path,
+        "void f()\n" +
+        "{\n" +
+        "\t\n" +
+        "}"
     )
 )
