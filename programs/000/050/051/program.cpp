@@ -4,23 +4,19 @@
 #include <vector>
 #include "head.h"
 
-typedef std::vector<std::string> Connectors;
-typedef std::vector<
-    std::tuple<
-        std::string,
-        Connectors
-    >
-> AssemblyConnections;
+typedef std::vector<std::string> Paths;
+typedef std::tuple<std::string, Paths> Branch;
+typedef std::vector<Branch> AssemblyConnections;
 
 int main()
 {
     AssemblyConnections assemblyConnections = {
-        std::make_tuple("designed", (Connectors){"approved", "rejected"}),
-        std::make_tuple("rejected", (Connectors){"designed"}),
-        std::make_tuple("approved", (Connectors){"ready", "rejected"}),
-        std::make_tuple("ready", (Connectors){"launched", "vault"}),
-        std::make_tuple("launched", (Connectors){"vault"}),
-        std::make_tuple("vault", (Connectors){"ready"})
+        std::make_tuple("designed", (Paths){"approved", "rejected"}),
+        std::make_tuple("rejected", (Paths){"designed"}),
+        std::make_tuple("approved", (Paths){"ready", "rejected"}),
+        std::make_tuple("ready", (Paths){"launched", "vault"}),
+        std::make_tuple("launched", (Paths){"vault"}),
+        std::make_tuple("vault", (Paths){"ready"})
     };
 
     // get approved from designed
